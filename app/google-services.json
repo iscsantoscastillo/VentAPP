@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "76103733430",
+    "firebase_url": "https://vigventas.firebaseio.com",
+    "project_id": "vigventas",
+    "storage_bucket": "vigventas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76103733430:android:b16069460806ac07",
+        "android_client_info": {
+          "package_name": "com.iscsantoscastillo.ventapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76103733430-s7o0qpicjenu6fsesm780q7vam7cqu45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iscsantoscastillo.ventapp",
+            "certificate_hash": "bb6777d954f22fae854babfd521a738ca8eecbb7"
+          }
+        },
+        {
+          "client_id": "76103733430-4q58ruuhjdf171mqgrgnob0ukc4bpasn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWLbQdu9_egnlSFzgSf4NHUR1t0bfKTSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76103733430-4q58ruuhjdf171mqgrgnob0ukc4bpasn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

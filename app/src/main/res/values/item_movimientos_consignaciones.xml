@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="item_movimientos_consignaciones">
+        <item>Desbanco</item>
+        <item>Provisional</item>
+        <item>CorteDejado</item>
+        <item>Anticipo</item>
+        <item>Pago</item>
+    </array>
+</resources>

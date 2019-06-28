@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="addConsignacionesModel" type="ViewModels.AddConsignacionesViewModels"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.iscsantoscastillo.ventapp.CustomScrollView
+            android:id="@+id/scrollGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="540dp">
+
+            <LinearLayout
+                android:layout_width="402dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textViewLeyenda"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Capture los datos de consignaciones"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_store_24px" />
+
+                    <EditText
+                        android:id="@+id/editTextIdCliente"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Ingrese un id de cliente"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        app:binding="@{addConsignacionesModel.idClienteUI}" />
+
+                    <Button
+                        android:id="@+id/btnBuscarCliente"
+                        android:layout_width="57dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="@{addConsignacionesModel::onClick}"
+                        android:text="..."
+                        android:textColor="@color/colorText" />
+
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        app:srcCompat="@drawable/ic_baseline_short_text_24px" />
+
+                    <EditText
+                        android:id="@+id/editTextNombreCliente"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:hint="nombre del cliente"
+                        android:inputType="textPersonName"
+                        app:binding="@{addConsignacionesModel.nombreClienteUI}" />
+
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_attach_money_24px" />
+
+                    <EditText
+                        android:id="@+id/editPorc"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:hint="Porcentaje"
+                        android:inputType="number"
+                        app:binding="@{addConsignacionesModel.idClienteUI}" />
+
+                    <EditText
+                        android:id="@+id/editTextGananciaCli"
+                        android:layout_width="199dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="false"
+                        android:hint="Ganancia cliente"
+                        android:inputType="number"
+                        app:binding="@{addConsignacionesModel.idClienteUI}" />
+
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_view_list_24px" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMovimientos"
+                        android:layout_width="121dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="10dp"
+                        android:entries="@array/item_movimientos_consignaciones"
+                        android:selectedItemPosition="@={addConsignacionesModel.item.selectedItemPosition}" />
+
+                    <EditText
+                        android:id="@+id/editTextImporteMovimiento"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="importe"
+                        android:inputType="number"
+                        app:binding="@{addConsignacionesModel.importeMovimientoUI}" />
+
+                    <Button
+                        android:id="@+id/buttonAddMovimiento"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="@{addConsignacionesModel::onClick}"
+                        android:text="add"
+                        android:textColor="@color/colorText" />
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_view_list_24px" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMovView"
+                        android:layout_width="299dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="10dp" />
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_note_add_24px" />
+
+                    <EditText
+                        android:id="@+id/editTextNotas"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="Notas"
+                        android:inputType="textMultiLine"
+                        app:binding="@{addConsignacionesModel.notasUI}" />
+                </android.support.v7.widget.GridLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="56dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_baseline_attach_money_24px" />
+
+                    <EditText
+                        android:id="@+id/editTextVentaTotal"
+                        android:layout_width="299dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="Venta total"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="24sp"
+                        app:binding="@{addConsignacionesModel.ventaTotalUI}" />
+
+
+                </android.support.v7.widget.GridLayout>
+
+
+
+                <Button
+                    android:id="@+id/buttonGuardarVenta"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{addConsignacionesModel::onClick}"
+                    android:text="Guardar"
+                    android:textColor="@color/colorText" />
+                <TextView
+                    android:id="@+id/textFirma"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Ponga su firma por favor"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="12sp" />
+
+                <com.iscsantoscastillo.ventapp.MyCanvas
+                    android:id="@+id/myCanvas"
+                    android:layout_width="400dp"
+                    android:layout_height="370dp" />
+                <Button
+                    android:id="@+id/buttonLimpiarCanvas"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{addConsignacionesModel::onClick}"
+                    android:text="Limpiar lienzo"
+                    android:textColor="@color/colorText" />
+                <Button
+                    android:id="@+id/buttonScroll"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{addConsignacionesModel::onClick}"
+                    android:text="Bloquear scroll"
+                    android:textColor="@color/colorText" />
+
+
+            </LinearLayout>
+        </com.iscsantoscastillo.ventapp.CustomScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

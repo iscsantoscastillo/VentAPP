@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="item_movimientos">
+        <item>Corte</item>
+        <item>Retiro</item><!--Retiro01-->
+        <!--<item>RetiroLleva
+        <item>ConsignaBase</item>
+        <item>ConsignaFinanzas-->
+
+        <item>Couta_</item>
+        <item>Propina_</item>
+        <item>Evento_</item>
+        <item>BaseMaquina_</item>
+        <item>Premio_</item>
+        <item>Otro_</item>
+    </array>
+</resources>
