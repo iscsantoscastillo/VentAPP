@@ -113,6 +113,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, Retiros.class));
         } else if (id == R.id.nav_consignaciones) {
             startActivity(new Intent(this, Consignaciones.class));
+        }else if (id == R.id.nav_bitacora) {
+            startActivity(new Intent(this, Bitacora.class));
         } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

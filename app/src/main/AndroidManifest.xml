@@ -48,6 +48,9 @@
         <activity
             android:name=".Consignaciones"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bitacora"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ViewPDFActivity"></activity>
     </application>
 
